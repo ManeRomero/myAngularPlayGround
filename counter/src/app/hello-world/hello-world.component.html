@@ -1,0 +1,13 @@
+<small>{{title}}</small>
+<h3>{{num}}</h3> 
+
+<button (click)="plusNum(step)">+</button>
+<button (click)="plusNum(-step)">-</button>
+<button (click)="multiNum()" [disabled]="num===0">Multiplica</button>
+
+<pre>
+    Mínimo: {{min}}
+    Máximo: {{max}}
+    Paso: {{step}}
+    Valor Inicial: {{num}}
+</pre>

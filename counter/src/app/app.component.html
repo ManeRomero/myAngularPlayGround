@@ -1,0 +1,13 @@
+<app-hello-world
+    *ngFor="let component of counters"
+    [min]="component.min"
+    [max]="component.max"
+    [step]="component.step"
+    [num]="component.num">
+</app-hello-world>
+
+<button (click)="addCounter()">Añadir Contador</button>
+<input type="number" [(ngModel)]="inputInit" placeholder="Valor Inicial">
+<input type="number" [(ngModel)]="inputMin" placeholder="Valor Min">
+<input type="number" [(ngModel)]="inputMax" placeholder="Valor Max">
+<input type="number" [(ngModel)]="inputStep" placeholder="Step">
