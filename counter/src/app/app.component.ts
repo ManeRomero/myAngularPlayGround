@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ClicksService } from './services/clicks.service';
 
 @Component({
   selector: 'app-root',
@@ -11,6 +12,8 @@ export class AppComponent {
   inputMax: number;
   inputStep: number;
   title = 'counter';
+  constructor(private cs: ClicksService) {}
+
   counters = [
     {
       num: 10,
@@ -32,6 +35,7 @@ export class AppComponent {
     }
   ];
   addCounter() {
+    this.cs.addClick()
     this.counters.push({
       num: this.inputInit,
       min: this.inputMin,

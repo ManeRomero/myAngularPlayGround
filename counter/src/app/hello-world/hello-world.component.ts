@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import {ClicksService} from '../services/clicks.service';
 
 @Component({
   selector: 'app-hello-world',
@@ -15,12 +16,13 @@ export class HelloWorldComponent implements OnInit {
   @Input() step: number;
   name: string;
 
-  constructor() {
-    this.title = 'Esta app es counter!';
-    this.name = '';
+  constructor(private clickService: ClicksService) {
+      this.title = 'Esta app es counter!';
+      this.name = '';
   }
 
   plusNum(value) {
+    this.clickService.addClick()
     if (this.num + value >= this.min && this.num + value <= this.max){
       this.num += value;
     } else {
@@ -29,6 +31,7 @@ export class HelloWorldComponent implements OnInit {
   }
 
   multiNum() {
+    this.clickService.addClick()
     this.num *= this.num + 1;
   }
 
