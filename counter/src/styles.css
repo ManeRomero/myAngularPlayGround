@@ -1,1 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+
+app-hello-world {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5vh
+}
+
+pre {
+    font-size: 80%
+}

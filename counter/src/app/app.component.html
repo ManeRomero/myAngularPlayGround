@@ -6,7 +6,7 @@
     [num]="component.num">
 </app-hello-world>
 
-<h3>{{cs.getClicks()}}</h3>
+<h3>NÚMERO DE CLICKS: {{cs.getClicks()}}</h3>
 
 <button (click)="addCounter()">Añadir Contador</button>
 <input type="number" [(ngModel)]="inputInit" placeholder="Valor Inicial">
